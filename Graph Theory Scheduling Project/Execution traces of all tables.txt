@@ -1,0 +1,827 @@
+Welcome to our Graph Theory Project!
+———————————————————————————————————————————————————————————————————————————
+Enter the wanted constraint table's number (or type 'exit' to quit): 1
+
+Table n°1:
+
+	α	1	2	3	4	5	6	7	8	9	10	11	12	13	ω
+α	*	0	0	*	*	*	*	*	*	*	*	*	*	*	*
+1	*	*	*	2	*	*	*	*	*	*	*	*	*	*	*
+2	*	*	*	*	5	*	*	*	*	*	*	*	*	*	*
+3	*	*	*	*	4	*	*	*	*	*	*	*	4	*	*
+4	*	*	*	*	*	2	*	*	*	*	*	2	*	*	*
+5	*	*	*	*	*	*	5	*	*	*	*	*	*	*	*
+6	*	*	*	*	*	*	*	5	*	*	*	*	*	5	*
+7	*	*	*	*	*	*	*	*	9	*	*	*	*	*	*
+8	*	*	*	*	*	*	*	*	*	2	*	*	*	*	*
+9	*	*	*	*	*	*	*	*	*	*	*	*	*	*	5
+10	*	*	*	*	*	*	*	*	*	*	*	*	*	*	1
+11	*	*	*	*	*	*	*	*	*	*	1	*	*	*	*
+12	*	*	*	*	*	*	*	*	*	*	*	*	*	1	*
+13	*	*	*	*	9	*	*	*	*	*	*	*	*	*	*
+ω	*	*	*	*	*	*	*	*	*	*	*	*	*	*	*
+
+Detecting cycles with the elimination method...
+Sources and sinks: α, ω. We delete them and go on.
+Sources and sinks: 1, 2, 9, 10. We delete them and go on.
+Sources and sinks: 3, 8, 11. We delete them and go on.
+Sources and sinks: 7, 12. We delete them and go on.
+Sources and sinks: none. We stop here.
+There are still some vertices, so there is at least on cycle.
+
+This graph is not a scheduling graph (contains cycles).
+
+———————————————————————————————————————————————————————————————————————————
+Enter the wanted constraint table's number (or type 'exit' to quit): 2
+
+Table n°2:
+
+	α	1	2	3	4	5	6	7	8	9	10	11	12	13	ω
+α	*	0	0	*	*	*	*	*	*	*	*	*	*	*	*
+1	*	*	*	2	*	*	2	*	*	*	*	*	*	*	*
+2	*	*	*	*	*	*	5	*	*	*	*	*	*	*	*
+3	*	*	*	*	4	*	*	*	*	*	*	*	*	*	*
+4	*	*	*	*	*	1	*	*	*	*	*	*	*	*	*
+5	*	*	*	*	*	*	*	*	*	*	*	*	*	*	9
+6	*	*	*	*	*	2	*	2	*	*	*	2	*	2	*
+7	*	*	*	*	*	*	*	*	5	*	*	*	5	*	*
+8	*	*	*	*	*	5	*	*	*	5	*	*	5	*	*
+9	*	*	*	*	*	*	*	*	*	*	9	*	9	*	*
+10	*	*	*	*	*	*	*	*	*	*	*	*	2	*	*
+11	*	*	*	*	*	*	*	*	*	*	*	*	*	19	*
+12	*	*	*	*	*	*	*	*	*	*	*	*	*	*	5
+13	*	*	*	*	*	*	*	*	*	*	*	*	*	*	1
+ω	*	*	*	*	*	*	*	*	*	*	*	*	*	*	*
+
+Detecting cycles with the elimination method...
+Sources and sinks: α, ω. We delete them and go on.
+Sources and sinks: 1, 2, 5, 12, 13. We delete them and go on.
+Sources and sinks: 3, 4, 6, 10, 11. We delete them and go on.
+Sources and sinks: 7, 9. We delete them and go on.
+Sources and sinks: 8. We delete them and go on.
+Sources and sinks: none. We stop here.
+There are no vertices left, so there is no cycle.
+
+This graph is a scheduling graph.
+
+
+Starting rank computation...
+Task 1 has predecessors: α thus we assign rank 1 to task 1
+Task 2 has predecessors: α thus we assign rank 1 to task 2
+Task 3 has predecessors: 1 thus we assign rank 2 to task 3
+Task 4 has predecessors: 3 thus we assign rank 3 to task 4
+Task 5 has predecessors: 4,6,8 Task 6 has predecessors: 1,2 thus we assign rank 2 to task 6
+Task 8 has predecessors: 7 Task 7 has predecessors: 6 thus we assign rank 3 to task 7
+thus we assign rank 4 to task 8
+thus we assign rank 5 to task 5
+Task 9 has predecessors: 8 thus we assign rank 5 to task 9
+Task 10 has predecessors: 9 thus we assign rank 6 to task 10
+Task 11 has predecessors: 6 thus we assign rank 3 to task 11
+Task 12 has predecessors: 7,8,9,10 thus we assign rank 7 to task 12
+Task 13 has predecessors: 6,11 thus we assign rank 4 to task 13
+Assigned rank 8 to terminal node ω
+
+
+Starting computation of free floats...
+For task α, free float is equal to 0
+Task 1 free float : 2 - (0 + 2) = 0
+Task 2 free float : 5 - (0 + 5) = 0
+Task 3 free float : 6 - (2 + 4) = 0
+Task 6 free float : 7 - (5 + 2) = 0
+Task 4 free float : 17 - (6 + 1) = 10
+Task 7 free float : 12 - (7 + 5) = 0
+Task 11 free float : 26 - (7 + 19) = 0
+Task 8 free float : 17 - (12 + 5) = 0
+Task 13 free float : 33 - (26 + 1) = 6
+Task 5 free float : 33 - (17 + 9) = 7
+Task 9 free float : 26 - (17 + 9) = 0
+Task 10 free float : 28 - (26 + 2) = 0
+Task 12 free float : 33 - (28 + 5) = 0
+Task ω has no free float value thus we enter X
+
+Rank:	 0	1	1	2	2	3	3	3	4	4	5	5	6	7	8
+Vertex:	 α	1	2	3	6	4	7	11	8	13	5	9	10	12	ω
+Earl.:	 0	0	0	2	5	6	7	7	12	26	17	17	26	28	33
+Latest:	 0	3	0	19	5	23	7	13	12	32	24	17	26	28	33
+Total f.:0	3	0	17	0	17	0	6	0	6	7	0	0	0	0
+Free f.: 0	0	0	0	0	10	0	0	0	6	7	0	0	0	X
+Critical path•s : α → 2 → 6 → 7 → 8 → 9 → 10 → 12 → ω    
+———————————————————————————————————————————————————————————————————————————
+Enter the wanted constraint table's number (or type 'exit' to quit): 3
+
+Table n°3:
+
+	α	1	2	3	4	5	6	7	8	9	10	11	12	ω
+α	*	0	0	*	*	*	*	*	*	*	*	*	*	*
+1	*	*	*	2	*	*	*	*	*	*	*	*	*	*
+2	*	*	*	5	5	*	*	*	*	*	*	*	*	*
+3	*	*	*	*	*	*	*	*	*	*	*	*	4	*
+4	*	*	*	2	*	2	*	*	2	*	*	2	*	*
+5	*	*	*	*	*	*	5	*	*	5	*	*	*	*
+6	*	*	*	*	*	*	*	5	5	5	*	*	*	*
+7	*	*	*	*	*	*	*	*	9	9	*	*	*	*
+8	*	*	*	*	*	*	*	*	*	*	*	*	*	1
+9	*	*	*	*	*	*	*	*	*	*	*	*	*	5
+10	*	*	*	*	*	*	*	*	*	*	*	*	*	9
+11	*	*	*	*	*	*	*	*	*	*	1	*	*	*
+12	*	*	*	*	*	*	*	*	1	*	*	*	*	*
+ω	*	*	*	*	*	*	*	*	*	*	*	*	*	*
+
+Detecting cycles with the elimination method...
+Sources and sinks: α, ω. We delete them and go on.
+Sources and sinks: 1, 2, 8, 9, 10. We delete them and go on.
+Sources and sinks: 4, 7, 11, 12. We delete them and go on.
+Sources and sinks: 3, 5, 6. We delete them and go on.
+Sources and sinks: none. We stop here.
+There are no vertices left, so there is no cycle.
+
+This graph is a scheduling graph.
+
+
+Starting rank computation...
+Task 1 has predecessors: α thus we assign rank 1 to task 1
+Task 2 has predecessors: α thus we assign rank 1 to task 2
+Task 3 has predecessors: 1,2,4 Task 4 has predecessors: 2 thus we assign rank 2 to task 4
+thus we assign rank 3 to task 3
+Task 5 has predecessors: 4 thus we assign rank 3 to task 5
+Task 6 has predecessors: 5 thus we assign rank 4 to task 6
+Task 7 has predecessors: 6 thus we assign rank 5 to task 7
+Task 8 has predecessors: 4,6,7,12 Task 12 has predecessors: 3 thus we assign rank 4 to task 12
+thus we assign rank 6 to task 8
+Task 9 has predecessors: 5,6,7 thus we assign rank 6 to task 9
+Task 10 has predecessors: 11 Task 11 has predecessors: 4 thus we assign rank 3 to task 11
+thus we assign rank 4 to task 10
+Assigned rank 7 to terminal node ω
+
+
+Starting computation of free floats...
+For task α, free float is equal to 0
+Task 1 free float : 7 - (0 + 2) = 5
+Task 2 free float : 5 - (0 + 5) = 0
+Task 4 free float : 7 - (5 + 2) = 0
+Task 3 free float : 11 - (7 + 4) = 0
+Task 5 free float : 12 - (7 + 5) = 0
+Task 11 free float : 8 - (7 + 1) = 0
+Task 6 free float : 17 - (12 + 5) = 0
+Task 12 free float : 26 - (11 + 1) = 14
+Task 10 free float : 31 - (8 + 9) = 14
+Task 7 free float : 26 - (17 + 9) = 0
+Task 8 free float : 31 - (26 + 1) = 4
+Task 9 free float : 31 - (26 + 5) = 0
+Task ω has no free float value thus we enter X
+
+Rank:	 0	1	1	2	3	3	3	4	4	4	5	6	6	7
+Vertex:	 α	1	2	4	3	5	11	6	12	10	7	8	9	ω
+Earl.:	 0	0	0	5	7	7	7	12	11	8	17	26	26	31
+Latest:	 0	23	0	5	25	7	21	12	29	22	17	30	26	31
+Total f.:0	23	0	0	18	0	14	0	18	14	0	4	0	0
+Free f.: 0	5	0	0	0	0	0	0	14	14	0	4	0	X
+Critical path•s : α → 2 → 4 → 5 → 6 → 7 → 9 → ω    
+———————————————————————————————————————————————————————————————————————————
+Enter the wanted constraint table's number (or type 'exit' to quit): 4
+
+Table n°4:
+
+	α	1	2	3	4	5	6	7	8	9	10	11	ω
+α	*	0	0	*	*	*	*	*	*	*	*	*	*
+1	*	*	*	*	3	*	*	*	*	*	*	*	*
+2	*	*	*	2	*	*	*	*	*	*	*	*	*
+3	*	*	*	*	*	*	*	*	*	*	3	*	*
+4	*	*	*	*	*	5	*	5	*	5	*	*	*
+5	*	*	*	*	*	*	4	*	4	*	*	*	*
+6	*	*	*	*	*	*	*	*	*	*	*	2	*
+7	*	*	*	*	*	*	*	*	2	*	*	*	*
+8	*	*	*	*	*	*	*	*	*	*	*	4	*
+9	*	*	*	*	*	*	*	*	*	*	5	*	*
+10	*	*	*	*	*	*	*	*	*	*	*	*	1
+11	*	*	*	*	*	*	*	*	*	*	*	*	2
+ω	*	*	*	*	*	*	*	*	*	*	*	*	*
+
+Detecting cycles with the elimination method...
+Sources and sinks: α, ω. We delete them and go on.
+Sources and sinks: 1, 2, 10, 11. We delete them and go on.
+Sources and sinks: 3, 4, 6, 8, 9. We delete them and go on.
+Sources and sinks: 5, 7. We delete them and go on.
+Sources and sinks: none. We stop here.
+There are no vertices left, so there is no cycle.
+
+This graph is a scheduling graph.
+
+
+Starting rank computation...
+Task 1 has predecessors: α thus we assign rank 1 to task 1
+Task 2 has predecessors: α thus we assign rank 1 to task 2
+Task 3 has predecessors: 2 thus we assign rank 2 to task 3
+Task 4 has predecessors: 1 thus we assign rank 2 to task 4
+Task 5 has predecessors: 4 thus we assign rank 3 to task 5
+Task 6 has predecessors: 5 thus we assign rank 4 to task 6
+Task 7 has predecessors: 4 thus we assign rank 3 to task 7
+Task 8 has predecessors: 5,7 thus we assign rank 4 to task 8
+Task 9 has predecessors: 4 thus we assign rank 3 to task 9
+Task 10 has predecessors: 3,9 thus we assign rank 4 to task 10
+Task 11 has predecessors: 6,8 thus we assign rank 5 to task 11
+Assigned rank 6 to terminal node ω
+
+
+Starting computation of free floats...
+For task α, free float is equal to 0
+Task 1 free float : 3 - (0 + 3) = 0
+Task 2 free float : 2 - (0 + 2) = 0
+Task 3 free float : 13 - (2 + 3) = 8
+Task 4 free float : 8 - (3 + 5) = 0
+Task 5 free float : 12 - (8 + 4) = 0
+Task 7 free float : 12 - (8 + 2) = 2
+Task 9 free float : 13 - (8 + 5) = 0
+Task 6 free float : 16 - (12 + 2) = 2
+Task 8 free float : 16 - (12 + 4) = 0
+Task 10 free float : 18 - (13 + 1) = 4
+Task 11 free float : 18 - (16 + 2) = 0
+Task ω has no free float value thus we enter X
+
+Rank:	 0	1	1	2	2	3	3	3	4	4	4	5	6
+Vertex:	 α	1	2	3	4	5	7	9	6	8	10	11	ω
+Earl.:	 0	0	0	2	3	8	8	8	12	12	13	16	18
+Latest:	 0	0	12	14	3	8	10	12	14	12	17	16	18
+Total f.:0	0	12	12	0	0	2	4	2	0	4	0	0
+Free f.: 0	0	0	8	0	0	2	0	2	0	4	0	X
+Critical path•s : α → 1 → 4 → 5 → 8 → 11 → ω    
+———————————————————————————————————————————————————————————————————————————
+Enter the wanted constraint table's number (or type 'exit' to quit): 5
+
+Table n°5:
+
+	α	1	2	3	4	5	6	7	8	9	10	11	12	13	ω
+α	*	0	0	*	*	*	*	*	*	*	*	*	*	*	*
+1	*	*	*	2	*	*	*	*	*	*	*	*	*	*	*
+2	*	*	*	*	5	*	*	*	*	*	*	*	*	*	*
+3	*	*	*	*	4	*	*	*	*	*	*	*	4	*	*
+4	*	*	*	*	*	2	*	*	*	*	*	2	*	*	*
+5	*	*	*	*	*	*	5	*	*	*	*	*	*	*	*
+6	*	*	*	*	*	*	*	5	*	*	*	*	*	5	*
+7	*	*	*	*	*	*	*	*	9	*	*	*	*	*	*
+8	*	*	*	*	*	*	*	*	*	2	*	*	*	*	*
+9	*	*	*	*	*	*	*	*	*	*	*	*	*	*	5
+10	*	*	*	*	*	*	*	*	*	*	*	*	*	*	1
+11	*	*	*	*	*	*	*	*	*	*	1	*	*	*	*
+12	*	*	*	*	*	*	*	*	*	*	*	*	*	1	*
+13	*	*	*	*	*	*	*	*	*	*	*	*	*	*	9
+ω	*	*	*	*	*	*	*	*	*	*	*	*	*	*	*
+
+Detecting cycles with the elimination method...
+Sources and sinks: α, ω. We delete them and go on.
+Sources and sinks: 1, 2, 9, 10, 13. We delete them and go on.
+Sources and sinks: 3, 8, 11, 12. We delete them and go on.
+Sources and sinks: 4, 7. We delete them and go on.
+Sources and sinks: 5, 6. We delete them and go on.
+Sources and sinks: none. We stop here.
+There are no vertices left, so there is no cycle.
+
+This graph is a scheduling graph.
+
+
+Starting rank computation...
+Task 1 has predecessors: α thus we assign rank 1 to task 1
+Task 2 has predecessors: α thus we assign rank 1 to task 2
+Task 3 has predecessors: 1 thus we assign rank 2 to task 3
+Task 4 has predecessors: 2,3 thus we assign rank 3 to task 4
+Task 5 has predecessors: 4 thus we assign rank 4 to task 5
+Task 6 has predecessors: 5 thus we assign rank 5 to task 6
+Task 7 has predecessors: 6 thus we assign rank 6 to task 7
+Task 8 has predecessors: 7 thus we assign rank 7 to task 8
+Task 9 has predecessors: 8 thus we assign rank 8 to task 9
+Task 10 has predecessors: 11 Task 11 has predecessors: 4 thus we assign rank 4 to task 11
+thus we assign rank 5 to task 10
+Task 12 has predecessors: 3 thus we assign rank 3 to task 12
+Task 13 has predecessors: 6,12 thus we assign rank 6 to task 13
+Assigned rank 9 to terminal node ω
+
+
+Starting computation of free floats...
+For task α, free float is equal to 0
+Task 1 free float : 2 - (0 + 2) = 0
+Task 2 free float : 6 - (0 + 5) = 1
+Task 3 free float : 6 - (2 + 4) = 0
+Task 4 free float : 8 - (6 + 2) = 0
+Task 12 free float : 18 - (6 + 1) = 11
+Task 5 free float : 13 - (8 + 5) = 0
+Task 11 free float : 9 - (8 + 1) = 0
+Task 6 free float : 18 - (13 + 5) = 0
+Task 10 free float : 34 - (9 + 1) = 24
+Task 7 free float : 27 - (18 + 9) = 0
+Task 13 free float : 34 - (18 + 9) = 7
+Task 8 free float : 29 - (27 + 2) = 0
+Task 9 free float : 34 - (29 + 5) = 0
+Task ω has no free float value thus we enter X
+
+Rank:	 0	1	1	2	3	3	4	4	5	5	6	6	7	8	9
+Vertex:	 α	1	2	3	4	12	5	11	6	10	7	13	8	9	ω
+Earl.:	 0	0	0	2	6	6	8	8	13	9	18	18	27	29	34
+Latest:	 0	0	1	2	6	24	8	32	13	33	18	25	27	29	34
+Total f.:0	0	1	0	0	18	0	24	0	24	0	7	0	0	0
+Free f.: 0	0	1	0	0	11	0	0	0	24	0	7	0	0	X
+Critical path•s : α → 1 → 3 → 4 → 5 → 6 → 7 → 8 → 9 → ω    
+———————————————————————————————————————————————————————————————————————————
+Enter the wanted constraint table's number (or type 'exit' to quit): 6
+
+Table n°6:
+
+	α	1	2	3	4	5	6	7	8	9	10	11	12	ω
+α	*	0	0	*	*	*	*	*	*	*	*	*	*	*
+1	*	*	*	10	10	*	*	*	*	*	*	*	10	*
+2	*	*	*	10	10	*	*	*	*	*	*	*	*	*
+3	*	*	*	*	*	*	*	*	*	9	9	*	*	*
+4	*	*	*	*	*	5	*	5	*	5	*	*	*	*
+5	*	*	*	*	*	*	4	*	4	*	*	*	*	*
+6	*	*	*	*	*	*	*	*	*	*	*	2	2	*
+7	*	*	*	*	*	*	*	*	2	*	*	*	*	*
+8	*	*	*	*	*	*	*	*	*	*	*	4	*	*
+9	*	*	*	*	*	*	*	*	8	*	8	*	*	*
+10	*	*	*	*	*	*	*	*	*	*	*	12	*	*
+11	*	*	*	*	*	*	*	*	*	*	*	*	*	2
+12	*	*	*	*	*	*	*	*	*	*	*	*	*	20
+ω	*	*	*	*	*	*	*	*	*	*	*	*	*	*
+
+Detecting cycles with the elimination method...
+Sources and sinks: α, ω. We delete them and go on.
+Sources and sinks: 1, 2, 11, 12. We delete them and go on.
+Sources and sinks: 3, 4, 6, 8, 10. We delete them and go on.
+Sources and sinks: 5, 7, 9. We delete them and go on.
+Sources and sinks: none. We stop here.
+There are no vertices left, so there is no cycle.
+
+This graph is a scheduling graph.
+
+
+Starting rank computation...
+Task 1 has predecessors: α thus we assign rank 1 to task 1
+Task 2 has predecessors: α thus we assign rank 1 to task 2
+Task 3 has predecessors: 1,2 thus we assign rank 2 to task 3
+Task 4 has predecessors: 1,2 thus we assign rank 2 to task 4
+Task 5 has predecessors: 4 thus we assign rank 3 to task 5
+Task 6 has predecessors: 5 thus we assign rank 4 to task 6
+Task 7 has predecessors: 4 thus we assign rank 3 to task 7
+Task 8 has predecessors: 5,7,9 Task 9 has predecessors: 3,4 thus we assign rank 3 to task 9
+thus we assign rank 4 to task 8
+Task 10 has predecessors: 3,9 thus we assign rank 4 to task 10
+Task 11 has predecessors: 6,8,10 thus we assign rank 5 to task 11
+Task 12 has predecessors: 1,6 thus we assign rank 5 to task 12
+Assigned rank 6 to terminal node ω
+
+
+Starting computation of free floats...
+For task α, free float is equal to 0
+Task 1 free float : 10 - (0 + 10) = 0
+Task 2 free float : 10 - (0 + 10) = 0
+Task 3 free float : 19 - (10 + 9) = 0
+Task 4 free float : 15 - (10 + 5) = 0
+Task 5 free float : 19 - (15 + 4) = 0
+Task 7 free float : 27 - (15 + 2) = 10
+Task 9 free float : 27 - (19 + 8) = 0
+Task 6 free float : 21 - (19 + 2) = 0
+Task 8 free float : 39 - (27 + 4) = 8
+Task 10 free float : 39 - (27 + 12) = 0
+Task 11 free float : 41 - (39 + 2) = 0
+Task 12 free float : 41 - (21 + 20) = 0
+Task ω has no free float value thus we enter X
+
+Rank:	 0	1	1	2	2	3	3	3	4	4	4	5	5	6
+Vertex:	 α	1	2	3	4	5	7	9	6	8	10	11	12	ω
+Earl.:	 0	0	0	10	10	15	15	19	19	27	27	39	21	41
+Latest:	 0	0	0	10	10	15	33	19	19	35	27	39	21	41
+Total f.:0	0	0	0	0	0	18	0	0	8	0	0	0	0
+Free f.: 0	0	0	0	0	0	10	0	0	8	0	0	0	X
+Critical path•s : α → 1 → 3 → 9 → 10 → 11 → ω    α → 1 → 4 → 5 → 6 → 12 → ω    α → 2 → 3 → 9 → 10 → 11 → ω    α → 2 → 4 → 5 → 6 → 12 → ω    
+———————————————————————————————————————————————————————————————————————————
+Enter the wanted constraint table's number (or type 'exit' to quit): 7
+
+Table n°7:
+
+	α	1	2	3	4	5	6	7	8	9	10	ω
+α	*	*	*	*	0	*	0	0	*	*	*	*
+1	*	*	*	*	*	*	*	*	*	1	*	*
+2	*	*	*	*	*	*	*	*	*	*	*	2
+3	*	*	*	*	*	*	*	*	*	3	*	*
+4	*	4	*	*	*	4	*	*	*	*	*	*
+5	*	*	*	*	*	*	*	*	5	*	*	*
+6	*	*	*	6	*	*	*	*	*	*	6	*
+7	*	*	7	*	*	*	*	*	7	*	*	*
+8	*	*	*	*	*	*	*	*	*	8	*	*
+9	*	*	*	*	*	*	*	*	*	*	*	9
+10	*	10	*	*	*	*	*	*	*	*	*	*
+ω	*	*	*	*	*	*	*	*	*	*	*	*
+
+Detecting cycles with the elimination method...
+Sources and sinks: α, ω. We delete them and go on.
+Sources and sinks: 2, 4, 6, 7, 9. We delete them and go on.
+Sources and sinks: 1, 3, 5, 8, 10. We delete them and go on.
+Sources and sinks: none. We stop here.
+There are no vertices left, so there is no cycle.
+
+This graph is a scheduling graph.
+
+
+Starting rank computation...
+Task 1 has predecessors: 4,10 Task 4 has predecessors: α thus we assign rank 1 to task 4
+Task 10 has predecessors: 6 Task 6 has predecessors: α thus we assign rank 1 to task 6
+thus we assign rank 2 to task 10
+thus we assign rank 3 to task 1
+Task 2 has predecessors: 7 Task 7 has predecessors: α thus we assign rank 1 to task 7
+thus we assign rank 2 to task 2
+Task 3 has predecessors: 6 thus we assign rank 2 to task 3
+Task 5 has predecessors: 4 thus we assign rank 2 to task 5
+Task 8 has predecessors: 5,7 thus we assign rank 3 to task 8
+Task 9 has predecessors: 1,3,8 thus we assign rank 4 to task 9
+Assigned rank 5 to terminal node ω
+
+
+Starting computation of free floats...
+For task α, free float is equal to 0
+Task 4 free float : 4 - (0 + 4) = 0
+Task 6 free float : 6 - (0 + 6) = 0
+Task 7 free float : 7 - (0 + 7) = 0
+Task 10 free float : 16 - (6 + 10) = 0
+Task 2 free float : 26 - (7 + 2) = 17
+Task 3 free float : 17 - (6 + 3) = 8
+Task 5 free float : 9 - (4 + 5) = 0
+Task 1 free float : 17 - (16 + 1) = 0
+Task 8 free float : 17 - (9 + 8) = 0
+Task 9 free float : 26 - (17 + 9) = 0
+Task ω has no free float value thus we enter X
+
+Rank:	 0	1	1	1	2	2	2	2	3	3	4	5
+Vertex:	 α	4	6	7	10	2	3	5	1	8	9	ω
+Earl.:	 0	0	0	0	6	7	6	4	16	9	17	26
+Latest:	 0	0	0	2	6	24	14	4	16	9	17	26
+Total f.:0	0	0	2	0	17	8	0	0	0	0	0
+Free f.: 0	0	0	0	0	17	8	0	0	0	0	X
+Critical path•s : α → 4 → 5 → 8 → 9 → ω    α → 6 → 10 → 1 → 9 → ω    
+———————————————————————————————————————————————————————————————————————————
+Enter the wanted constraint table's number (or type 'exit' to quit): 8
+
+Table n°8:
+
+	α	1	2	3	4	5	6	7	8	9	10	ω
+α	*	*	*	*	0	0	0	0	*	*	0	*
+1	*	*	*	*	*	*	*	*	*	1	*	*
+2	*	*	*	*	*	*	*	*	*	2	*	*
+3	*	*	*	*	*	*	*	*	*	3	*	*
+4	*	4	*	*	*	*	*	*	*	*	*	*
+5	*	5	*	*	*	*	*	*	5	*	*	*
+6	*	*	*	6	*	*	*	*	*	*	*	*
+7	*	*	7	*	*	*	*	*	7	*	*	*
+8	*	*	*	*	*	*	*	*	*	9	*	*
+9	*	*	*	*	*	*	*	*	*	*	*	9
+10	*	10	*	10	*	*	*	*	*	*	*	*
+ω	*	*	*	*	*	*	*	*	*	*	*	*
+
+Detecting cycles with the elimination method...
+Sources and sinks: α, ω. We delete them and go on.
+Sources and sinks: 4, 5, 6, 7, 9, 10. We delete them and go on.
+Sources and sinks: 1, 2, 3, 8. We delete them and go on.
+Sources and sinks: none. We stop here.
+There are no vertices left, so there is no cycle.
+
+This graph is a scheduling graph.
+
+
+Starting rank computation...
+Task 1 has predecessors: 4,5,10 Task 4 has predecessors: α thus we assign rank 1 to task 4
+Task 5 has predecessors: α thus we assign rank 1 to task 5
+Task 10 has predecessors: α thus we assign rank 1 to task 10
+thus we assign rank 2 to task 1
+Task 2 has predecessors: 7 Task 7 has predecessors: α thus we assign rank 1 to task 7
+thus we assign rank 2 to task 2
+Task 3 has predecessors: 6,10 Task 6 has predecessors: α thus we assign rank 1 to task 6
+thus we assign rank 2 to task 3
+Task 8 has predecessors: 5,7 thus we assign rank 2 to task 8
+Task 9 has predecessors: 1,2,3,8 thus we assign rank 3 to task 9
+Assigned rank 4 to terminal node ω
+
+
+Starting computation of free floats...
+For task α, free float is equal to 0
+Task 4 free float : 10 - (0 + 4) = 6
+Task 5 free float : 7 - (0 + 5) = 2
+Task 10 free float : 10 - (0 + 10) = 0
+Task 7 free float : 7 - (0 + 7) = 0
+Task 6 free float : 10 - (0 + 6) = 4
+Task 1 free float : 16 - (10 + 1) = 5
+Task 2 free float : 16 - (7 + 2) = 7
+Task 3 free float : 16 - (10 + 3) = 3
+Task 8 free float : 16 - (7 + 9) = 0
+Task 9 free float : 25 - (16 + 9) = 0
+Task ω has no free float value thus we enter X
+
+Rank:	 0	1	1	1	1	1	2	2	2	2	3	4
+Vertex:	 α	4	5	10	7	6	1	2	3	8	9	ω
+Earl.:	 0	0	0	0	0	0	10	7	10	7	16	25
+Latest:	 0	11	2	3	0	7	15	14	13	7	16	25
+Total f.:0	11	2	3	0	7	5	7	3	0	0	0
+Free f.: 0	6	2	0	0	4	5	7	3	0	0	X
+Critical path•s : α → 7 → 8 → 9 → ω    
+———————————————————————————————————————————————————————————————————————————
+Enter the wanted constraint table's number (or type 'exit' to quit): 9
+
+Table n°9:
+
+	α	1	2	3	4	5	6	7	8	9	10	ω
+α	*	*	*	*	0	*	0	0	*	*	0	*
+1	*	*	*	*	*	*	*	*	*	1	*	*
+2	*	*	*	*	*	*	*	*	*	2	*	*
+3	*	*	*	*	*	*	*	*	*	3	*	*
+4	*	4	*	*	*	4	*	*	*	*	*	*
+5	*	5	*	*	*	*	*	*	5	*	*	*
+6	*	*	*	6	*	*	*	*	*	*	*	*
+7	*	*	7	*	*	*	*	*	7	*	*	*
+8	*	8	*	*	*	*	*	*	*	8	*	*
+9	*	*	*	*	*	*	*	*	*	*	*	9
+10	*	10	*	10	*	*	*	*	*	*	*	*
+ω	*	*	*	*	*	*	*	*	*	*	*	*
+
+Detecting cycles with the elimination method...
+Sources and sinks: α, ω. We delete them and go on.
+Sources and sinks: 4, 6, 7, 9, 10. We delete them and go on.
+Sources and sinks: 1, 2, 3, 5. We delete them and go on.
+Sources and sinks: 8. We delete them and go on.
+Sources and sinks: none. We stop here.
+There are no vertices left, so there is no cycle.
+
+This graph is a scheduling graph.
+
+
+Starting rank computation...
+Task 1 has predecessors: 4,5,8,10 Task 4 has predecessors: α thus we assign rank 1 to task 4
+Task 5 has predecessors: 4 thus we assign rank 2 to task 5
+Task 8 has predecessors: 5,7 Task 7 has predecessors: α thus we assign rank 1 to task 7
+thus we assign rank 3 to task 8
+Task 10 has predecessors: α thus we assign rank 1 to task 10
+thus we assign rank 4 to task 1
+Task 2 has predecessors: 7 thus we assign rank 2 to task 2
+Task 3 has predecessors: 6,10 Task 6 has predecessors: α thus we assign rank 1 to task 6
+thus we assign rank 2 to task 3
+Task 9 has predecessors: 1,2,3,8 thus we assign rank 5 to task 9
+Assigned rank 6 to terminal node ω
+
+
+Starting computation of free floats...
+For task α, free float is equal to 0
+Task 4 free float : 4 - (0 + 4) = 0
+Task 7 free float : 7 - (0 + 7) = 0
+Task 10 free float : 10 - (0 + 10) = 0
+Task 6 free float : 10 - (0 + 6) = 4
+Task 5 free float : 9 - (4 + 5) = 0
+Task 2 free float : 18 - (7 + 2) = 9
+Task 3 free float : 18 - (10 + 3) = 5
+Task 8 free float : 17 - (9 + 8) = 0
+Task 1 free float : 18 - (17 + 1) = 0
+Task 9 free float : 27 - (18 + 9) = 0
+Task ω has no free float value thus we enter X
+
+Rank:	 0	1	1	1	1	2	2	2	3	4	5	6
+Vertex:	 α	4	7	10	6	5	2	3	8	1	9	ω
+Earl.:	 0	0	0	0	0	4	7	10	9	17	18	27
+Latest:	 0	0	2	5	9	4	16	15	9	17	18	27
+Total f.:0	0	2	5	9	0	9	5	0	0	0	0
+Free f.: 0	0	0	0	4	0	9	5	0	0	0	X
+Critical path•s : α → 4 → 5 → 8 → 1 → 9 → ω    
+———————————————————————————————————————————————————————————————————————————
+Enter the wanted constraint table's number (or type 'exit' to quit): 10
+
+Table n°10:
+
+	α	1	2	3	4	5	6	7	8	ω
+α	*	0	*	*	*	*	*	*	*	*
+1	*	*	2	*	2	2	*	*	*	*
+2	*	*	*	3	3	*	*	*	3	*
+3	*	*	*	*	*	*	*	5	*	*
+4	*	*	*	*	*	6	6	*	6	*
+5	*	*	*	*	*	*	2	2	*	*
+6	*	*	*	*	*	*	*	*	*	1
+7	*	*	*	*	*	*	*	*	6	*
+8	*	*	*	*	*	*	*	*	*	1
+ω	*	*	*	*	*	*	*	*	*	*
+
+Detecting cycles with the elimination method...
+Sources and sinks: α, ω. We delete them and go on.
+Sources and sinks: 1, 6, 8. We delete them and go on.
+Sources and sinks: 2, 7. We delete them and go on.
+Sources and sinks: 3, 4, 5. We delete them and go on.
+Sources and sinks: none. We stop here.
+There are no vertices left, so there is no cycle.
+
+This graph is a scheduling graph.
+
+
+Starting rank computation...
+Task 1 has predecessors: α thus we assign rank 1 to task 1
+Task 2 has predecessors: 1 thus we assign rank 2 to task 2
+Task 3 has predecessors: 2 thus we assign rank 3 to task 3
+Task 4 has predecessors: 1,2 thus we assign rank 3 to task 4
+Task 5 has predecessors: 1,4 thus we assign rank 4 to task 5
+Task 6 has predecessors: 4,5 thus we assign rank 5 to task 6
+Task 7 has predecessors: 3,5 thus we assign rank 5 to task 7
+Task 8 has predecessors: 2,4,7 thus we assign rank 6 to task 8
+Assigned rank 7 to terminal node ω
+
+
+Starting computation of free floats...
+For task α, free float is equal to 0
+Task 1 free float : 2 - (0 + 2) = 0
+Task 2 free float : 5 - (2 + 3) = 0
+Task 3 free float : 13 - (5 + 5) = 3
+Task 4 free float : 11 - (5 + 6) = 0
+Task 5 free float : 13 - (11 + 2) = 0
+Task 6 free float : 20 - (13 + 1) = 6
+Task 7 free float : 19 - (13 + 6) = 0
+Task 8 free float : 20 - (19 + 1) = 0
+Task ω has no free float value thus we enter X
+
+Rank:	 0	1	2	3	3	4	5	5	6	7
+Vertex:	 α	1	2	3	4	5	6	7	8	ω
+Earl.:	 0	0	2	5	5	11	13	13	19	20
+Latest:	 0	0	2	8	5	11	19	13	19	20
+Total f.:0	0	0	3	0	0	6	0	0	0
+Free f.: 0	0	0	3	0	0	6	0	0	X
+Critical path•s : α → 1 → 2 → 4 → 5 → 7 → 8 → ω    
+———————————————————————————————————————————————————————————————————————————
+Enter the wanted constraint table's number (or type 'exit' to quit): 11
+
+Table n°11:
+
+	α	1	2	3	4	5	6	7	8	ω
+α	*	0	*	*	*	*	*	*	*	*
+1	*	*	1	*	1	1	*	*	*	*
+2	*	*	*	1	*	*	*	*	1	*
+3	*	*	*	*	*	*	*	4	*	*
+4	*	*	2	*	*	*	2	*	2	*
+5	*	*	*	*	5	*	5	5	*	*
+6	*	*	*	*	*	*	*	*	6	*
+7	*	*	*	*	*	*	*	*	3	*
+8	*	*	*	*	*	*	*	*	*	0
+ω	*	*	*	*	*	*	*	*	*	*
+
+Detecting cycles with the elimination method...
+Sources and sinks: α, ω. We delete them and go on.
+Sources and sinks: 1, 8. We delete them and go on.
+Sources and sinks: 5, 6, 7. We delete them and go on.
+Sources and sinks: 3, 4. We delete them and go on.
+Sources and sinks: 2. We delete them and go on.
+Sources and sinks: none. We stop here.
+There are no vertices left, so there is no cycle.
+
+This graph is a scheduling graph.
+
+
+Starting rank computation...
+Task 1 has predecessors: α thus we assign rank 1 to task 1
+Task 2 has predecessors: 1,4 Task 4 has predecessors: 1,5 Task 5 has predecessors: 1 thus we assign rank 2 to task 5
+thus we assign rank 3 to task 4
+thus we assign rank 4 to task 2
+Task 3 has predecessors: 2 thus we assign rank 5 to task 3
+Task 6 has predecessors: 4,5 thus we assign rank 4 to task 6
+Task 7 has predecessors: 3,5 thus we assign rank 6 to task 7
+Task 8 has predecessors: 2,4,6,7 thus we assign rank 7 to task 8
+Assigned rank 8 to terminal node ω
+
+
+Starting computation of free floats...
+For task α, free float is equal to 0
+Task 1 free float : 1 - (0 + 1) = 0
+Task 5 free float : 6 - (1 + 5) = 0
+Task 4 free float : 8 - (6 + 2) = 0
+Task 2 free float : 9 - (8 + 1) = 0
+Task 6 free float : 16 - (8 + 6) = 2
+Task 3 free float : 13 - (9 + 4) = 0
+Task 7 free float : 16 - (13 + 3) = 0
+Task 8 free float : 16 - (16 + 0) = 0
+Task ω has no free float value thus we enter X
+
+Rank:	 0	1	2	3	4	4	5	6	7	8
+Vertex:	 α	1	5	4	2	6	3	7	8	ω
+Earl.:	 0	0	1	6	8	8	9	13	16	16
+Latest:	 0	0	1	6	8	10	9	13	16	16
+Total f.:0	0	0	0	0	2	0	0	0	0
+Free f.: 0	0	0	0	0	2	0	0	0	X
+Critical path•s : α → 1 → 5 → 4 → 2 → 3 → 7 → 8 → ω    
+———————————————————————————————————————————————————————————————————————————
+Enter the wanted constraint table's number (or type 'exit' to quit): 12
+
+Table n°12:
+
+	α	1	2	3	4	5	6	7	8	9	10	11	12	ω
+α	*	0	0	*	*	*	*	*	*	*	*	*	*	*
+1	*	*	*	10	10	*	*	*	*	*	*	*	10	*
+2	*	*	*	10	10	*	*	*	*	*	*	*	*	*
+3	*	*	*	*	*	*	*	*	*	9	*	*	*	*
+4	*	*	*	*	*	5	*	5	*	5	*	*	*	*
+5	*	*	*	*	*	*	4	*	4	*	*	*	*	*
+6	*	*	*	*	*	*	*	*	*	*	*	2	2	*
+7	*	*	*	*	*	*	*	*	2	*	*	*	*	*
+8	*	*	*	*	*	*	*	*	*	*	*	4	*	*
+9	*	*	*	*	*	*	*	*	8	*	8	*	*	*
+10	*	*	*	12	*	*	*	*	*	*	*	12	*	*
+11	*	*	*	*	*	*	*	*	*	*	*	*	*	2
+12	*	*	*	*	*	*	*	*	*	*	*	*	*	20
+ω	*	*	*	*	*	*	*	*	*	*	*	*	*	*
+
+Detecting cycles with the elimination method...
+Sources and sinks: α, ω. We delete them and go on.
+Sources and sinks: 1, 2, 11, 12. We delete them and go on.
+Sources and sinks: 4, 6, 8. We delete them and go on.
+Sources and sinks: 5, 7. We delete them and go on.
+Sources and sinks: none. We stop here.
+There are still some vertices, so there is at least on cycle.
+
+This graph is not a scheduling graph (contains cycles).
+
+———————————————————————————————————————————————————————————————————————————
+Enter the wanted constraint table's number (or type 'exit' to quit): 13
+
+Table n°13:
+
+	α	1	2	3	4	ω
+α	*	0	*	0	*	*
+1	*	*	9	*	*	*
+2	*	*	*	*	*	2
+3	*	*	4	*	4	*
+4	*	*	*	*	*	7
+ω	*	*	*	*	*	*
+
+Detecting cycles with the elimination method...
+Sources and sinks: α, ω. We delete them and go on.
+Sources and sinks: 1, 2, 3, 4. We delete them and go on.
+Sources and sinks: none. We stop here.
+There are no vertices left, so there is no cycle.
+
+This graph is a scheduling graph.
+
+
+Starting rank computation...
+Task 1 has predecessors: α thus we assign rank 1 to task 1
+Task 2 has predecessors: 1,3 Task 3 has predecessors: α thus we assign rank 1 to task 3
+thus we assign rank 2 to task 2
+Task 4 has predecessors: 3 thus we assign rank 2 to task 4
+Assigned rank 3 to terminal node ω
+
+
+Starting computation of free floats...
+For task α, free float is equal to 0
+Task 1 free float : 9 - (0 + 9) = 0
+Task 3 free float : 4 - (0 + 4) = 0
+Task 2 free float : 11 - (9 + 2) = 0
+Task 4 free float : 11 - (4 + 7) = 0
+Task ω has no free float value thus we enter X
+
+Rank:	 0	1	1	2	2	3
+Vertex:	 α	1	3	2	4	ω
+Earl.:	 0	0	0	9	4	11
+Latest:	 0	0	0	9	4	11
+Total f.:0	0	0	0	0	0
+Free f.: 0	0	0	0	0	X
+Critical path•s : α → 1 → 2 → ω    α → 3 → 4 → ω    
+———————————————————————————————————————————————————————————————————————————
+Enter the wanted constraint table's number (or type 'exit' to quit): 14
+
+Table n°14:
+
+	α	1	2	3	4	ω
+α	*	0	0	*	*	*
+1	*	*	*	3	*	*
+2	*	*	*	2	2	*
+3	*	*	*	*	*	4
+4	*	*	*	1	*	*
+ω	*	*	*	*	*	*
+
+Detecting cycles with the elimination method...
+Sources and sinks: α, ω. We delete them and go on.
+Sources and sinks: 1, 2, 3. We delete them and go on.
+Sources and sinks: 4. We delete them and go on.
+Sources and sinks: none. We stop here.
+There are no vertices left, so there is no cycle.
+
+This graph is a scheduling graph.
+
+
+Starting rank computation...
+Task 1 has predecessors: α thus we assign rank 1 to task 1
+Task 2 has predecessors: α thus we assign rank 1 to task 2
+Task 3 has predecessors: 1,2,4 Task 4 has predecessors: 2 thus we assign rank 2 to task 4
+thus we assign rank 3 to task 3
+Assigned rank 4 to terminal node ω
+
+
+Starting computation of free floats...
+For task α, free float is equal to 0
+Task 1 free float : 3 - (0 + 3) = 0
+Task 2 free float : 2 - (0 + 2) = 0
+Task 4 free float : 3 - (2 + 1) = 0
+Task 3 free float : 7 - (3 + 4) = 0
+Task ω has no free float value thus we enter X
+
+Rank:	 0	1	1	2	3	4
+Vertex:	 α	1	2	4	3	ω
+Earl.:	 0	0	0	2	3	7
+Latest:	 0	0	0	2	3	7
+Total f.:0	0	0	0	0	0
+Free f.: 0	0	0	0	0	X
+Critical path•s : α → 1 → 3 → ω    α → 2 → 4 → 3 → ω    
