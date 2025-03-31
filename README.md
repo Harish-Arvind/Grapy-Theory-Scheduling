@@ -136,5 +136,5 @@ For higher scores:
 - The project **must be rigorously tested** on various constraint tables before submission.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/Harish-Arvind/Grapy-Theory-Scheduling/blob/main/Graph%20Theory%20Scheduling%20Project/LICENSE) file for details.
 
